@@ -1,0 +1,119 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Página-1" id="m_Ec-bdGvmq529Z6-LHk">
+    <mxGraphModel dx="1895" dy="1053" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dLkM6x01ixodrMuuSeFM-1" value="Módulo de Entrenamiento&lt;div&gt;(Python + TensorFlow&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="20" width="470" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-2" value="&lt;div&gt;- Recolección de landmarks con&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;MediaPipe Hands&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- Generación del dataset CSV&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Preprocesamiento (scaler,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;label encoder)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Entrenamiento MLP (TensorFlow,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Dense Layers)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Generación del modelo .keras&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Transformación y exportación a .tflite&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-1">
+          <mxGeometry x="40" y="45" width="390" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-14" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="dLkM6x01ixodrMuuSeFM-3" target="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-3" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;Archivos exportados&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sign_model.tflite&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;scaler_params.json&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;labels.json&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="270" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" target="dLkM6x01ixodrMuuSeFM-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="200" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-5" value="Módulo de Inferencia (App Flutter)&amp;nbsp;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="95" y="390" width="460" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-6" value="Interfaz de usuario (Flutter UI)&amp;nbsp;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="30" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-7" value="Captura de imagen con cámara del dispositivo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="60" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-8" value="Detección de landmarks (MediaPipe / plugin Flutter)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="90" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-9" value="Normalización y vectorización de puntos&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="120" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-10" value="Escalado de características (scaler_params.json)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="150" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-11" value="Inferencia con modelo TensorFlow Lite (.tflite)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="180" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-12" value="Predicción de seña y confianza" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="210" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-13" value="Visualización del resultado en tiempo real&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-5">
+          <mxGeometry y="240" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-49" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="dLkM6x01ixodrMuuSeFM-16" target="dLkM6x01ixodrMuuSeFM-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1270" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-16" value="Módulo de Entrenamiento en PC&lt;div&gt;(Python + TensorFlow)&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="770" y="200" width="360" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-16" source="dLkM6x01ixodrMuuSeFM-15" target="dLkM6x01ixodrMuuSeFM-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-15" value="Captura de datos (MediaPipe Hands)" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-16">
+          <mxGeometry x="37.5" y="50" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-21" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-16" source="dLkM6x01ixodrMuuSeFM-17" target="dLkM6x01ixodrMuuSeFM-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-17" value="Generación de dataset" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-16">
+          <mxGeometry x="37.5" y="110" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-24" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-16" source="dLkM6x01ixodrMuuSeFM-19" target="dLkM6x01ixodrMuuSeFM-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-19" value="Preprocesamiento:&lt;div&gt;* Normalización y escalado de características&lt;/div&gt;&lt;div&gt;* Codificación de etiquetas&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-16">
+          <mxGeometry x="37.5" y="170" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-25" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-16" source="dLkM6x01ixodrMuuSeFM-22" target="dLkM6x01ixodrMuuSeFM-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-22" value="Entrenamiento del modelo MLP (TensorFlow, capas densas)" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-16">
+          <mxGeometry x="42.5" y="250" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-23" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Exportación del Modelo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Model keras&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sign_model.tflite&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;scaler_params.json&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;labels.json&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-16">
+          <mxGeometry x="42.5" y="330" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-26" value="Módulo de Inferencia en dispositivo móvil&lt;div&gt;(Aplicación Flutter)&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=40;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="1258" y="207.5" width="362" height="425" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-27" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-26" source="dLkM6x01ixodrMuuSeFM-28" target="dLkM6x01ixodrMuuSeFM-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-28" value="Interfaz de usuario (Flutter UI)" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-26">
+          <mxGeometry x="41" y="62.5" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-37" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-26" source="dLkM6x01ixodrMuuSeFM-30" target="dLkM6x01ixodrMuuSeFM-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-30" value="Modelo de captura" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-26">
+          <mxGeometry x="41" y="122.5" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-31" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-26" source="dLkM6x01ixodrMuuSeFM-32" target="dLkM6x01ixodrMuuSeFM-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-32" value="Preprocesamiento:&lt;div&gt;* Normalización y vectorización de puntos&lt;/div&gt;&lt;div&gt;* Escalado de características&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-26">
+          <mxGeometry x="41" y="252.5" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-34" value="Postprocesamiento:&lt;div&gt;* Decodificación de etiquetas&lt;/div&gt;&lt;div&gt;*Visualización del resultado en tiempo real&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-26">
+          <mxGeometry x="41" y="337" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-38" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="dLkM6x01ixodrMuuSeFM-26" source="dLkM6x01ixodrMuuSeFM-36" target="dLkM6x01ixodrMuuSeFM-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dLkM6x01ixodrMuuSeFM-36" value="Detección de landmarks&lt;div&gt;(MediaPipe / plugin Flutter)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="dLkM6x01ixodrMuuSeFM-26">
+          <mxGeometry x="41" y="182.5" width="280" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
